@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Sendja & Sedoeh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        /* --- 1. COPY DARI INDEX (Agar Konsisten) --- */
+        :root {
+            --primary-dark: #2C2321;
+            --accent-gold: #C5A975;
+            --bg-cream: #F9F7F2;
+            --bg-white: #FFFFFF;
+            --bg-taupe: #EBE5DE;
+            --text-grey: #666666;
+            --spacing-section: 60px; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--bg-cream); color: var(--primary-dark); line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+
+        /* Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: var(--spacing-section) 0; }
+        .section-tag { color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 10px; }
+
+        /* Header (Sama persis dengan index) */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background-color: rgba(249, 247, 242, 0.95); backdrop-filter: blur(5px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--primary-dark); }
+        nav ul { display: flex; gap: 40px; }
+        nav a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; position: relative; }
+        nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -5px; left: 0; background-color: var(--accent-gold); transition: width 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-gold); }
+        nav a:hover::after { width: 100%; }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .btn-reserve { padding: 10px 25px; border: 1px solid var(--primary-dark); color: var(--primary-dark); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700; }
+        .btn-reserve:hover { background-color: var(--primary-dark); color: #fff; }
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- 2. STYLE KHUSUS HALAMAN ABOUT --- */
+        
+        /* Hero lebih pendek untuk halaman dalam (inner page) */
+        .page-hero {
+            height: 60vh; /* Lebih pendek dari home (85vh) */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
+        }
+        .page-hero h1 { font-size: 3.5rem; margin-bottom: 15px; }
+
+        /* Story Section (Grid Terbalik dari Home) */
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .story-img img { width: 100%; border-radius: 4px; box-shadow: 20px 20px 0px var(--bg-taupe); } /* Style foto beda dikit */
+        
+        /* Philosophy Section */
+        .philosophy { background-color: var(--bg-white); text-align: center; }
+        .philosophy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .philosophy-card { padding: 30px; background: var(--bg-cream); border-radius: 4px; }
+        .philosophy-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 15px; }
+
+        /* Team Section */
+        .team-section { text-align: center; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; }
+        .team-member img { 
+            width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin: 0 auto 20px; 
+            border: 3px solid var(--accent-gold); padding: 5px; /* Efek cincin emas */
+        }
+        .team-role { font-size: 0.85rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 5px; display: block; }
+
+        /* Footer (Sama dengan index) */
+        footer { background-color: #1a1514; color: #aaa; padding: 50px 0 20px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-logo { font-size: 1.5rem; color: #fff; margin-bottom: 15px; display: block; }
+        .footer-title { color: #fff; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-social i { font-size: 1.5rem; margin-right: 15px; transition: 0.3s; }
+        .footer-social i:hover { color: var(--accent-gold); }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .hamburger { display: block; }
+            nav { position: absolute; top: 70px; left: 0; width: 100%; background: var(--bg-cream); padding: 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); display: none; flex-direction: column; text-align: center; }
+            nav.active { display: flex; }
+            nav ul { flex-direction: column; gap: 20px; }
+            .header-actions .btn-reserve { display: none; }
+            
+            .page-hero h1 { font-size: 2.5rem; }
+            .story-grid, .philosophy-grid, .team-grid { grid-template-columns: 1fr; }
+            .story-img { margin-bottom: 30px; }
+            /* Memastikan teks tidak mepet di HP */
+            .text-content { padding: 0 15px; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Sendja & Sedoeh</div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservasi</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="reservation.html" class="btn-reserve">Book Table</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Sebuah Perjalanan Rasa</h1>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Mengenal lebih dekat siapa kami, apa yang kami percaya, dan mengapa kami menyeduh.</p>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="story-grid">
+            <div class="text-content">
+                <span class="section-tag">Awal Mula</span>
+                <h2>Bermula dari Mimpi Sederhana</h2>
+                <p>Sendja & Sedoeh lahir pada tahun 2020, di tengah keinginan sederhana untuk menciptakan ruang di mana waktu terasa berjalan lebih lambat. Kami percaya bahwa kopi bukan sekadar kafein, melainkan sebuah ritual.</p>
+                <p>Didirikan oleh dua sahabat yang mencintai aroma biji kopi panggang dan percakapan hangat, tempat ini dibangun bata demi bata dengan memprioritaskan kenyamanan. Kami ingin menjadi "ruang ketiga" Anda—tempat ternyaman setelah rumah dan kantor.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Sig_Martin.png" alt="Signature" style="width: 150px; opacity: 0.6; margin-top: 20px;">
+            </div>
+            <div class="story-img">
+                <img src="https://images.unsplash.com/photo-1542181961-9590d0c79dab?q=80&w=800&auto=format&fit=crop" alt="Cafe Founders">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding philosophy">
+        <div class="container">
+            <span class="section-tag">Nilai Kami</span>
+            <h2>Filosofi Senja</h2>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-grey);">Apa yang membuat setiap cangkir di Sendja & Sedoeh terasa istimewa.</p>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <i class="ph ph-heart philosophy-icon"></i>
+                    <h3>Ketulusan</h3>
+                    <p style="font-size: 0.9rem; color: #666;">Kami melayani bukan hanya dengan tangan, tapi dengan hati. Setiap pelanggan adalah tamu kehormatan.</p>
+                </div>
+                <div class="philosophy-card">
+                    <i class="ph ph-plant philosophy-icon"></i>
+                    <h3>Keaslian</h3>
+                    <p style="font-size: 0.9rem; color: #666;">Bahan baku lokal, tanpa perasa buatan. Kami menghormati rasa asli dari setiap biji kopi.</p>
+                </div>
+                <div class="philosophy-card">
+                    <i class="ph ph-users-three philosophy-icon"></i>
+                    <h3>Komunitas</h3>
+                    <p style="font-size: 0.9rem; color: #666;">Lebih dari kedai kopi, kami adalah tempat berkumpulnya ide, karya, dan persahabatan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding team-section container">
+        <span class="section-tag">Keluarga Kami</span>
+        <h2>Wajah di Balik Bar</h2>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1583336130561-1d94f7195cc2?q=80&w=400&auto=format&fit=crop" alt="Head Barista">
+                <span class="team-role">Head Barista</span>
+                <h3>Dimas Anggara</h3>
+                <p style="font-size: 0.9rem; color: #777;">Pencinta V60 dengan pengalaman 7 tahun di industri kopi spesialti.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?q=80&w=400&auto=format&fit=crop" alt="Founder">
+                <span class="team-role">Founder</span>
+                <h3>Siti Nurbaya</h3>
+                <p style="font-size: 0.9rem; color: #777;">Visioner yang memastikan setiap sudut kafe terasa seperti rumah.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&auto=format&fit=crop" alt="Head Chef">
+                <span class="team-role">Head Chef</span>
+                <h3>Rian Saputra</h3>
+                <p style="font-size: 0.9rem; color: #777;">Ahli pastry yang bangun sebelum matahari terbit untuk memanggang roti.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <span class="footer-logo">Sendja & Sedoeh</span>
+                <p>Menghadirkan kenyamanan klasik dan kopi terbaik di jantung kota Malang.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Lokasi</h4>
+                <p>Jl. Ijen Besar No. 45<br>Malang, Jawa Timur</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Jam Buka</h4>
+                <p>Senin - Jumat: 08:00 - 22:00</p>
+                <p>Sabtu - Minggu: 09:00 - 23:00</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Ikuti Kami</h4>
+                <div class="footer-social">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-tiktok-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px; color: #666;">
+            &copy; 2025 Sendja & Sedoeh Cafe. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("navbar");
+            if (nav.style.display === "flex") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "flex";
+            }
+        }
+    </script>
+</body>
+</html>
