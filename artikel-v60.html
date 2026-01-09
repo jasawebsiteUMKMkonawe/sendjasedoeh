@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mengapa V60 Menjadi Favorit? - Blog Senja & Seduh</title>
+    <meta property="og:title" content="Mengapa V60 Menjadi Favorit? - Blog Senja & Seduh">
+    <meta property="og:description" content="Kupas tuntas rahasia di balik metode seduh V60 yang menghasilkan rasa bersih dan kompleks.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1497935586351-b67a49e012bf">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* --- 1. CSS VARIABLES & RESET --- */
+        :root {
+            --primary-dark: #2C2321;
+            --accent-gold: #C5A975;
+            --bg-cream: #F9F7F2;
+            --bg-white: #FFFFFF;
+            --bg-taupe: #EBE5DE;
+            --text-grey: #666666;
+            --spacing-section: 60px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--bg-cream); color: var(--primary-dark); line-height: 1.8; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+        
+        /* Container */
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: var(--spacing-section) 0; }
+
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background-color: rgba(249, 247, 242, 0.95); backdrop-filter: blur(5px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); }
+        .logo img { max-height: 50px; width: auto; display: block; }
+        
+        nav ul { display: flex; gap: 40px; }
+        nav a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; position: relative; }
+        nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -5px; left: 0; background-color: var(--accent-gold); transition: width 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-gold); }
+        nav a:hover::after { width: 100%; }
+
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .btn-reserve { padding: 10px 25px; border: 1px solid var(--primary-dark); color: var(--primary-dark); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700; }
+        .btn-reserve:hover { background-color: var(--primary-dark); color: #fff; }
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- ARTICLE STYLES --- */
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        
+        .article-header { text-align: center; margin-bottom: 40px; padding-top: 40px; }
+        .article-meta { color: #888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+        .article-header h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 30px; }
+
+        /* Gambar Utama & Pendukung dengan Caption */
+        figure { margin: 30px 0; }
+        .article-featured-img, .support-img, .promo-gif { width: 100%; border-radius: 4px; object-fit: cover; }
+        .article-featured-img { height: 500px; }
+        .support-img { height: 400px; }
+        figcaption { text-align: center; font-size: 0.9rem; color: #888; margin-top: 10px; font-style: italic; }
+
+        /* Article Content Text */
+        .article-content { font-size: 1.15rem; color: #444; }
+        .article-content p { margin-bottom: 25px; }
+        .article-content h2 { font-size: 1.8rem; margin-top: 50px; margin-bottom: 20px; color: var(--primary-dark); scroll-margin-top: 100px; border-bottom: 2px solid var(--bg-taupe); padding-bottom: 10px; }
+        .article-content h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: var(--accent-gold); scroll-margin-top: 100px; }
+        
+        /* Blockquote */
+        blockquote { border-left: 4px solid var(--accent-gold); padding-left: 30px; margin: 40px 0; font-style: italic; color: #555; font-size: 1.3rem; font-family: 'Playfair Display', serif; background: #fff; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); border-radius: 0 8px 8px 0; }
+
+        /* --- TABLE OF CONTENTS (TOC) --- */
+        .toc-box { background-color: var(--bg-white); border: 1px solid #ddd; padding: 25px; margin-bottom: 40px; border-radius: 8px; border-left: 5px solid var(--primary-dark); }
+        .toc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; cursor: pointer; }
+        .toc-header h4 { margin: 0; font-size: 1.2rem; color: var(--primary-dark); }
+        .toc-toggle-btn { background: none; border: none; color: var(--accent-gold); cursor: pointer; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; }
+        .toc-list { list-style: none; padding-left: 0; margin: 0; display: block; }
+        .toc-list li { margin-bottom: 10px; }
+        .toc-list li.h3-link { padding-left: 20px; font-size: 0.95rem; }
+        .toc-list a { color: #666; text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .toc-list a:hover { color: var(--accent-gold); border-bottom-color: var(--accent-gold); }
+
+        /* --- READ ALSO (BACA JUGA) --- */
+        .read-also-box { margin: 40px 0; padding: 20px; background-color: #fff; border-left: 5px solid var(--accent-gold); border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 15px; }
+        .read-also-label { font-weight: 700; color: var(--primary-dark); text-transform: uppercase; font-size: 0.85rem; white-space: nowrap; }
+        .read-also-link { font-family: 'Playfair Display', serif; font-weight: 700; font-style: italic; color: var(--primary-dark); font-size: 1.1rem; text-decoration: underline; text-decoration-color: var(--accent-gold); }
+        .read-also-link:hover { color: var(--accent-gold); }
+
+        /* --- FAQ SECTION --- */
+        .faq-section { margin-top: 50px; background: #fff; padding: 30px; border-radius: 8px; }
+        .faq-item { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .faq-question { font-weight: 700; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-answer { display: none; margin-top: 10px; color: #666; font-size: 1rem; }
+        .faq-item.active .faq-answer { display: block; animation: fadeIn 0.5s; }
+        .faq-icon { transition: transform 0.3s; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+        /* --- KESIMPULAN --- */
+        .conclusion-box { background-color: var(--primary-dark); color: #fff; padding: 40px; border-radius: 8px; margin-top: 50px; text-align: center; }
+        .conclusion-box h2 { color: var(--accent-gold); margin-top: 0; }
+        .conclusion-box p { color: #ddd; margin-bottom: 0; }
+
+        /* --- AUTHOR & SHARE --- */
+        .author-box { display: flex; align-items: center; gap: 20px; background-color: var(--bg-taupe); padding: 30px; border-radius: 8px; margin-top: 60px; border-left: 5px solid var(--accent-gold); }
+        .author-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
+        .author-info h5 { margin: 0 0 5px 0; font-size: 1.2rem; }
+        .author-role { font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px; font-weight: bold; display: block; margin-bottom: 5px; }
+        
+        .share-box { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; display: flex; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .share-label { font-weight: bold; color: var(--primary-dark); margin-right: 10px; font-family: 'Playfair Display', serif; font-size: 1.1rem; }
+        .share-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; text-transform: uppercase; font-weight: bold; color: #fff; transition: 0.3s; border: none; cursor: pointer; }
+        .share-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .btn-wa { background-color: #25D366; }
+        .btn-fb { background-color: #1877F2; }
+        .btn-tw { background-color: #000; }
+        .btn-copy { background-color: #666; }
+
+        /* --- RELATED POSTS --- */
+        .related-posts-section { margin-top: 80px; padding-top: 50px; border-top: 1px solid #ddd; }
+        .related-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .related-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); transition: 0.3s; display: flex; flex-direction: column; }
+        .related-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+        .related-img { width: 100%; height: 200px; object-fit: cover; }
+        .related-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .related-content h4 { font-size: 1.2rem; margin-bottom: 10px; line-height: 1.4; color: var(--primary-dark); }
+        .related-desc { font-size: 0.9rem; color: #777; margin-bottom: 20px; flex-grow: 1; }
+        .btn-read-more { align-self: flex-start; color: var(--accent-gold); font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid transparent; transition: 0.3s; }
+        .btn-read-more:hover { border-bottom-color: var(--accent-gold); }
+
+        /* Footer & Others same as Index */
+        footer { background-color: #1a1514; color: #aaa; padding: 50px 0 20px; font-size: 0.9rem; margin-top: 0; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-logo { font-size: 1.5rem; color: #fff; margin-bottom: 15px; display: block; }
+        .footer-title { color: #fff; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-social i { font-size: 1.5rem; margin-right: 15px; transition: 0.3s; }
+        .footer-social i:hover { color: var(--accent-gold); }
+
+        /* Floating Buttons */
+        .floating-container { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 9999; }
+        .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; cursor: pointer; text-decoration: none; border: none; }
+        .float-btn:hover { transform: translateY(-3px); }
+        .btn-wa-float { background-color: #25D366; }
+        .btn-top { background-color: var(--primary-dark); opacity: 0; visibility: hidden; transform: translateY(20px); }
+        .btn-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        /* Animation */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .hamburger { display: block; }
+            nav { display: none; }
+            
+            .article-header h1 { font-size: 2.2rem; }
+            .article-featured-img, .support-img { height: auto !important; aspect-ratio: 16/9; }
+            .read-also-box { flex-direction: column; align-items: flex-start; gap: 5px; }
+            .author-box { flex-direction: column; text-align: center; }
+            .related-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo Sendja & Sedoeh">
+        </a>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="reservation.html">Reservasi</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="reservation.html" class="btn-reserve">Book Table</a>
+        </div>
+    </header>
+
+    <div class="container section-padding">
+
+        <a href="blog.html" class="back-link">&larr; Kembali ke Blog</a>
+
+        <div class="article-header">
+            <div class="article-meta">Edukasi Kopi &bull; 12 Jan 2025</div>
+            <h1>Mengapa V60 Menjadi Favorit Para Penikmat Kopi?</h1>
+        </div>
+
+        <figure>
+            
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1200&auto=format&fit=crop"
+                alt="Proses penyeduhan kopi manual V60" class="article-featured-img">
+            <figcaption>Seorang barista menuangkan air panas menggunakan ketel leher angsa untuk ekstraksi V60 yang sempurna.</figcaption>
+        </figure>
+
+        <div class="article-content" id="contentBody">
+
+            <div class="toc-box">
+                <div class="toc-header">
+                    <h4>Daftar Isi</h4>
+                    <button class="toc-toggle-btn" onclick="toggleToc()">[ Sembunyikan ]</button>
+                </div>
+                <ul class="toc-list" id="tocList">
+                    </ul>
+            </div>
+
+            <p>Di balik meja bar Senja & Seduh, seringkali pelanggan bertanya: <em>"Apa bedanya kopi V60 dengan kopi
+                    tubruk atau Americano biasa?"</em> Jawabannya bukan sekadar pada alat yang digunakan, melainkan pada
+                filosofi rasa yang dihasilkannya.</p>
+
+            <p>Metode seduh manual (manual brew) khususnya V60, telah menjadi primadona di kalangan pecinta kopi
+                gelombang ketiga (Third Wave Coffee). Alat berbentuk kerucut sederhana ini mampu mengubah biji kopi
+                biasa menjadi pengalaman rasa yang kompleks dan elegan.</p>
+
+            <h2>Mengenal Desain Kerucut 60 Derajat</h2>
+            <p>Nama "V60" diambil dari bentuk alatnya yang menyerupai huruf 'V' dengan sudut kemiringan tepat 60
+                derajat. Diciptakan oleh perusahaan kaca asal Jepang, Hario, desain ini bukan tanpa alasan.</p>
+
+            <div class="read-also-box">
+                <span class="read-also-label">Baca Juga:</span>
+                <a href="#" class="read-also-link">Panduan Memilih Biji Kopi: Arabika vs Robusta</a>
+            </div>
+
+            <p>Ada tiga elemen kunci pada desain V60 yang mempengaruhi rasa:</p>
+            <ul>
+                <li><strong>Sudut 60 Derajat:</strong> Memungkinkan air mengalir ke pusat bubuk kopi, memperpanjang
+                    waktu kontak air dengan kopi untuk ekstraksi yang maksimal.</li>
+                <li><strong>Lubang Besar di Dasar:</strong> Berbeda dengan alat lain yang memiliki lubang kecil, lubang
+                    besar pada V60 memberikan kontrol penuh kepada barista.</li>
+                <li><strong>Guratan Spiral (Ridges):</strong> Garis-garis spiral di dinding alat membantu udara keluar
+                    saat proses penyeduhan, memastikan bubuk kopi mengembang sempurna (blooming).</li>
+            </ul>
+
+            <blockquote>
+                "V60 adalah tentang kejujuran. Ia tidak menyembunyikan apapun. Jika biji kopinya berkualitas, rasanya
+                akan luar biasa jernih."
+            </blockquote>
+
+            <figure>
+                
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Detail bubuk kopi yang sedang blooming" class="support-img">
+                <figcaption>Proses "Blooming" dimana gas CO2 dilepaskan dari bubuk kopi segar.</figcaption>
+            </figure>
+
+            <h2>Kejernihan Rasa (Clean Cup) dan Notes Buah</h2>
+            <p>Alasan utama mengapa V60 begitu dicintai adalah karakter hasil seduhannya yang dikenal sebagai
+                <strong>Clean Cup</strong>. Penggunaan kertas filter (paper filter) pada metode ini sangat krusial.</p>
+
+            <p>Kertas filter menyerap sebagian besar minyak (oil) dari biji kopi dan menahan ampas halus (fines). Minyak
+                kopi seringkali memberikan rasa tebal (body) yang berat, namun juga bisa menutupi rasa-rasa halus yang
+                unik.</p>
+
+            <div class="read-also-box">
+                <span class="read-also-label">Baca Juga:</span>
+                <a href="#" class="read-also-link">Sejarah Kopi di Indonesia yang Mendunia</a>
+            </div>
+
+            <p>Dengan tersaringnya minyak tersebut, karakter asli dari biji kopi—terutama tingkat keasaman (acidity)
+                yang menyenangkan—dapat keluar dengan bebas. Inilah sebabnya mengapa V60 sangat cocok untuk menyeduh
+                biji kopi jenis <strong>Arabika Single Origin</strong>.</p>
+
+            <h3>Bagaimana V60 Mengeluarkan Rasa Fruity?</h3>
+            <p>Bayangkan Anda memiliki biji kopi dari Ethiopia atau Gayo yang dideskripsikan memiliki rasa "jeruk" atau
+                "berry". Jika diseduh dengan metode Tubruk atau French Press, rasa buah tersebut mungkin akan tertutup
+                oleh rasa pahit dan body yang tebal.</p>
+
+            <figure style="text-align: center; margin: 40px 0;">
+                <img src="https://media.giphy.com/media/l0HlHfrbYyCl2S6wE/giphy.gif" alt="Coffee Brewing Animation" class="promo-gif" style="max-width: 600px; border-radius: 8px;">
+                <figcaption>Nikmati setiap tetesan kopi yang diseduh dengan presisi.</figcaption>
+            </figure>
+
+            <p>Namun dengan V60, kejernihan air dan suhu yang tepat (biasanya 90-93°C) akan mengekstrak komponen rasa
+                asam buah tersebut tanpa membawa serta rasa pahit yang berlebihan. Hasilnya adalah secangkir kopi yang
+                ringan, segar, dan aromatik.</p>
+
+            <h2>Sebuah Ritual di Senja & Seduh</h2>
+            <p>Di Senja & Seduh, menyajikan V60 bukan sekadar menuangkan air panas. Ini adalah ritual. Barista kami akan
+                menimbang biji kopi dengan presisi, menggilingnya sesaat sebelum diseduh, dan menuangkan air dengan
+                gerakan melingkar yang ritmis.</p>
+
+            <div class="faq-section">
+                <h3>Pertanyaan Umum (FAQ)</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Apa bedanya V60 dengan kopi Tubruk?
+                        <i class="ph ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Kopi tubruk merendam bubuk kopi sepenuhnya sehingga menghasilkan rasa yang tebal (full body) dan berampas. V60 menggunakan filter kertas yang menyaring ampas dan minyak, menghasilkan rasa yang lebih jernih, ringan, dan menonjolkan karakter asam buah (acidity).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Biji kopi apa yang cocok untuk V60?
+                        <i class="ph ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        V60 sangat ideal untuk biji kopi Arabika Single Origin dengan profile roasting Light hingga Medium. Biji kopi dari daerah seperti Gayo, Ethiopia, atau Jawa Barat sangat direkomendasikan.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Berapa suhu air yang ideal?
+                        <i class="ph ph-caret-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Suhu ideal biasanya berkisar antara 90°C hingga 93°C. Jika terlalu panas kopi bisa gosong (pahit), jika terlalu dingin rasa asamnya tidak akan keluar maksimal.
+                    </div>
+                </div>
+            </div>
+
+            <div class="conclusion-box">
+                <h2>Kesimpulan</h2>
+                <p>V60 bukan sekadar alat seduh, melainkan jembatan untuk memahami kompleksitas rasa kopi yang sesungguhnya. Bagi Anda yang mencari kejernihan rasa, notes buah yang segar, dan pengalaman minum kopi yang elegan, V60 adalah pilihan terbaik. Datanglah ke Senja & Seduh dan biarkan kami menyajikannya untuk Anda.</p>
+            </div>
+
+        </div>
+
+        <div class="share-box">
+            <span class="share-label">Bagikan Artikel:</span>
+            <button onclick="shareToWA()" class="share-btn btn-wa">
+                <i class="ph ph-whatsapp-logo"></i> WhatsApp
+            </button>
+            <button onclick="shareToFB()" class="share-btn btn-fb">
+                <i class="ph ph-facebook-logo"></i> Facebook
+            </button>
+            <button onclick="shareToTwitter()" class="share-btn btn-tw">
+                <i class="ph ph-twitter-logo"></i> Twitter (X)
+            </button>
+            <button onclick="copyLink()" class="share-btn btn-copy">
+                <i class="ph ph-link"></i> Salin Link
+            </button>
+        </div>
+
+        <div class="author-box">
+            <img src="https://images.unsplash.com/photo-1583336130561-1d94f7195cc2?q=80&w=200&auto=format&fit=crop"
+                alt="Penulis" class="author-img">
+            <div class="author-info">
+                <span class="author-role">Penulis</span>
+                <h5>Dimas Anggara</h5>
+                <p style="margin: 0; color: #666; font-size: 0.9rem;">Head Barista di Senja & Seduh dengan pengalaman 10 tahun di industri kopi spesialti. Pecinta kopi hitam dan fotografi analog.</p>
+                <span class="publish-date" style="display:block; margin-top:10px;">Dipublikasikan pada: 12 Januari 2025</span>
+            </div>
+        </div>
+
+        <div class="related-posts-section">
+            <h3 class="related-title">Artikel Terkait</h3>
+
+            <div class="related-grid">
+                <div class="related-card">
+                    <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?q=80&w=400&auto=format&fit=crop"
+                        alt="Biji Kopi" class="related-img">
+                    <div class="related-content">
+                        <h4>Perjalanan Biji Kopi Gayo dari Kebun ke Cangkir</h4>
+                        <p class="related-desc">Menelusuri jejak kopi terbaik dari dataran tinggi Aceh.</p>
+                        <a href="#" class="btn-read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=400&auto=format&fit=crop"
+                        alt="Manual Brew" class="related-img">
+                    <div class="related-content">
+                        <h4>5 Tips Menyeduh Kopi Manual di Rumah</h4>
+                        <p class="related-desc">Rahasia barista untuk seduhan rumahan yang nikmat.</p>
+                        <a href="#" class="btn-read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=400&auto=format&fit=crop"
+                        alt="Arabika Robusta" class="related-img">
+                    <div class="related-content">
+                        <h4>Mengenal Perbedaan Mendasar Arabika & Robusta</h4>
+                        <p class="related-desc">Mana yang lebih cocok untuk lidah Anda?</p>
+                        <a href="#" class="btn-read-more">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <span class="footer-logo">SENDJA & SEDOEH</span>
+                <p>Menghadirkan kenyamanan klasik dan kopi terbaik.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Lokasi</h4>
+                <p>Jl. Ijen Besar No. 45<br>Malang, Jawa Timur</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Jam Buka</h4>
+                <p>Senin - Jumat: 08:00 - 22:00</p>
+                <p>Sabtu - Minggu: 09:00 - 23:00</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Ikuti Kami</h4>
+                <div class="footer-social">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px; color: #666;">
+            &copy; 2025 Senja & Seduh Cafe.
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <a href="#" class="float-btn btn-top" id="btnTop" title="Kembali ke Atas">
+            <i class="ph ph-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="float-btn btn-wa-float" title="Chat WhatsApp">
+            <i class="ph ph-whatsapp-logo"></i>
+        </a>
+    </div>
+
+    <script>
+        // --- 1. SCRIPT TOC OTOMATIS ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const content = document.querySelector('.article-content');
+            const headings = content.querySelectorAll('h2, h3');
+            const tocList = document.getElementById('tocList');
+            const tocBox = document.querySelector('.toc-box');
+
+            if (headings.length > 0) {
+                headings.forEach((heading, index) => {
+                    // Buat ID jika belum ada
+                    const id = heading.id || `toc-${index}`;
+                    heading.id = id;
+
+                    // Buat item list
+                    const li = document.createElement('li');
+                    if (heading.tagName === 'H3') {
+                        li.classList.add('h3-link');
+                    }
+
+                    li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
+                    tocList.appendChild(li);
+                });
+            } else {
+                tocBox.style.display = 'none'; // Sembunyikan jika tidak ada heading
+            }
+        });
+
+        // Toggle TOC Visibility
+        function toggleToc() {
+            var list = document.getElementById("tocList");
+            var btn = document.querySelector(".toc-toggle-btn");
+            if (list.style.display === "none") {
+                list.style.display = "block";
+                btn.innerHTML = "[ Sembunyikan ]";
+            } else {
+                list.style.display = "none";
+                btn.innerHTML = "[ Tampilkan ]";
+            }
+        }
+
+        // --- 2. SCRIPT SHARE BUTTONS ---
+        const pageUrl = encodeURIComponent(window.location.href);
+        const pageTitle = encodeURIComponent(document.title);
+
+        function shareToWA() {
+            window.open(`https://wa.me/?text=${pageTitle}%0A${pageUrl}`, '_blank');
+        }
+
+        function shareToFB() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank');
+        }
+
+        function shareToTwitter() {
+            window.open(`https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`, '_blank');
+        }
+
+        function copyLink() {
+            const el = document.createElement('textarea');
+            el.value = window.location.href;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert("Link artikel berhasil disalin!");
+        }
+
+        // --- 3. SCRIPT FAQ ACCORDION ---
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            parent.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

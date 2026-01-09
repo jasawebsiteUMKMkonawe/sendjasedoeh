@@ -3,10 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sendja & Sedoeh - Home</title>
+    
+    <title>Sendja & Sedoeh - Coffee Shop Klasik di Malang</title>
+    <meta name="description" content="Nikmati kopi Arabika terbaik dan pastry artisan di Sendja & Sedoeh. Cafe dengan suasana klasik dan tenang di jantung kota Malang. Reservasi sekarang.">
+    <meta name="keywords" content="Cafe Malang, Kopi Klasik, Tempat Nongkrong Malang, Sendja dan Sedoeh, Coffee Shop Ijen">
+    <meta name="author" content="Sendja & Sedoeh Team">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sendja & Sedoeh - Cita Rasa Klasik">
+    <meta property="og:description" content="Ruang tenang di tengah kota Malang. Nikmati seduhan kopi terbaik dan suasana nyaman.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://sendjasedoeh.vercel.app/">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#F9F7F2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1920&auto=format&fit=crop">
+
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Sendja & Sedoeh",
+      "image": "https://sendjasedoeh.vercel.app//img/logo.png",
+      "@id": "https://sendjasedoeh.vercel.app/",
+      "url": "https://sendjasedoeh.vercel.app/",
+      "telephone": "+6281234567890",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ijen Besar No. 45",
+        "addressLocality": "Malang",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "65112",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.978469,
+        "longitude": 112.631786
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "23:00"
+        }
+      ],
+      "servesCuisine": "Coffee, Pastry, Indonesian",
+      "priceRange": "$$"
+    }
+    </script>
+
     <style>
         /* --- 1. RESET & VARIABLES --- */
         :root {
@@ -47,7 +112,18 @@
             position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--primary-dark); }
+        /* LOGO IMAGE STYLING */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 50px; 
+            width: auto;      
+            display: block;
+        }
+
         nav ul { display: flex; gap: 40px; }
         nav a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; position: relative; }
         nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -5px; left: 0; background-color: var(--accent-gold); transition: width 0.3s; }
@@ -62,9 +138,12 @@
         /* --- 3. HERO SECTION --- */
         .hero {
             height: 85vh; 
+            /* Menggunakan gambar high-res namun tetap dioptimasi CSS-nya */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1920&auto=format&fit=crop');
             background-attachment: fixed; background-position: center; background-size: cover;
             display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
+            /* Optimasi render priority */
+            content-visibility: auto;
         }
         .hero-content { max-width: 800px; padding: 20px; animation: fadeInUp 1.2s ease-out; }
         .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; }
@@ -121,10 +200,55 @@
         .footer-social i { font-size: 1.5rem; margin-right: 15px; transition: 0.3s; }
         .footer-social i:hover { color: var(--accent-gold); }
 
-        /* --- ANIMATIONS & MOBILE RESPONSIVE --- */
+        /* --- 3. FLOATING BUTTONS --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .float-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-wa-float {
+            background-color: #25D366;
+        }
+
+        .btn-top {
+            background-color: var(--primary-dark);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        .btn-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- FIX UNTUK MOBILE --- */
         @media (max-width: 768px) {
             header { padding: 15px 20px; }
             .hamburger { display: block; }
@@ -132,25 +256,23 @@
             nav.active { display: flex; }
             nav ul { flex-direction: column; gap: 20px; }
             .header-actions .btn-reserve { display: none; }
+            .logo img { max-height: 40px; }
             .hero h1 { font-size: 2.8rem; }
-            
-            /* Perbaikan Layout Mobile */
             .about-grid, .feature-grid { grid-template-columns: 1fr; }
             .about-img-wrapper { order: -1; margin-bottom: 30px; }
             .slide img { height: 300px; }
-
-            /* PERBAIKAN KHUSUS CERITA KAMI */
-            /* Memberikan jarak kiri-kanan ekstra pada teks di tampilan mobile */
-            .text-content {
-                padding: 0 15px; 
-            }
+            .text-content { padding: 0 15px; }
         }
+        .floating-container { bottom: 20px; right: 20px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Sendja & Sedoeh</div>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo Sendja & Sedoeh" fetchpriority="high" width="200" height="50">
+        </a>
+
         <nav id="navbar">
             <ul>
                 <li><a href="index.html" class="active">Beranda</a></li>
@@ -168,136 +290,150 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Cita Rasa Klasik dalam<br>Setiap Seduhan</h1>
-            <p>Ruang tenang di tengah kota, di mana kualitas bertemu dengan kenyamanan.</p>
-            <a href="menu.html" class="btn-gold">Jelajahi Rasa</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Cita Rasa Klasik dalam<br>Setiap Seduhan</h1>
+                <p>Ruang tenang di tengah kota, di mana kualitas bertemu dengan kenyamanan.</p>
+                <a href="menu.html" class="btn-gold">Jelajahi Rasa</a>
+            </div>
+        </section>
 
-    <section class="section-padding container">
-        <div class="about-grid">
-            <div class="about-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop" alt="Interior Cafe">
-                <div class="about-bg-accent"></div>
-            </div>
-            <div class="text-content">
-                <span class="section-tag">Cerita Kami</span>
-                <h2>Warisan Kualitas & Estetika</h2>
-                <p>Didirikan atas kecintaan pada kopi tradisional, Sendja & Sedoeh bukan sekadar kedai kopi. Kami adalah rumah bagi mereka yang mencari jeda dari hiruk pikuk kota.</p>
-                <p>Setiap sudut interior kami dirancang dengan detail klasik, menciptakan atmosfer yang hangat untuk bekerja, bercengkrama, atau sekadar melamun.</p>
-                <a href="about.html" style="border-bottom: 1px solid var(--accent-gold); display: inline-block; margin-top: 10px;">Lebih lanjut tentang kami &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding features">
-        <div class="container">
-            <div class="text-content">
-                <span class="section-tag">Kenapa Memilih Kami</span>
-                <h2>Pengalaman yang Berbeda</h2>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <i class="ph ph-coffee-bean feature-icon"></i>
-                    <h3>Biji Kopi Pilihan</h3>
-                    <p>Hanya menggunakan 100% Arabika Grade 1 dari petani lokal Jawa Timur.</p>
+        <section class="section-padding container">
+            <div class="about-grid">
+                <div class="about-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop" 
+                         alt="Interior Cafe Sendja & Sedoeh" 
+                         loading="lazy" 
+                         decoding="async">
+                    <div class="about-bg-accent"></div>
                 </div>
-                <div class="feature-item">
-                    <i class="ph ph-armchair feature-icon"></i>
-                    <h3>Ambiance Tenang</h3>
-                    <p>Musik jazz lembut, kursi nyaman, dan WiFi cepat untuk produktivitas Anda.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="ph ph-chef-hat feature-icon"></i>
-                    <h3>Artisan Pastry</h3>
-                    <p>Roti dan kue dipanggang segar setiap pagi di dapur terbuka kami.</p>
+                <div class="text-content">
+                    <span class="section-tag">Cerita Kami</span>
+                    <h2>Warisan Kualitas & Estetika</h2>
+                    <p>Didirikan atas kecintaan pada kopi tradisional, Sendja & Sedoeh bukan sekadar kedai kopi. Kami adalah rumah bagi mereka yang mencari jeda dari hiruk pikuk kota.</p>
+                    <p>Setiap sudut interior kami dirancang dengan detail klasik, menciptakan atmosfer yang hangat untuk bekerja, bercengkrama, atau sekadar melamun.</p>
+                    <a href="about.html" style="border-bottom: 1px solid var(--accent-gold); display: inline-block; margin-top: 10px;">Lebih lanjut tentang kami &rarr;</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-padding menu-section">
-        <div class="container">
-            <span class="section-tag">Menu Favorit</span>
-            <h2>Pilihan Barista Minggu Ini</h2>
-            
-            <div class="menu-grid">
-                <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" class="menu-img" alt="Tiramisu">
-                    <div class="menu-info">
-                        <div class="menu-header">
-                            <h3>Classic Tiramisu</h3>
-                            <span class="menu-price">45K</span>
+        <section class="section-padding features">
+            <div class="container">
+                <div class="text-content">
+                    <span class="section-tag">Kenapa Memilih Kami</span>
+                    <h2>Pengalaman yang Berbeda</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="ph ph-coffee-bean feature-icon"></i>
+                        <h3>Biji Kopi Pilihan</h3>
+                        <p>Hanya menggunakan 100% Arabika Grade 1 dari petani lokal Jawa Timur.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="ph ph-armchair feature-icon"></i>
+                        <h3>Ambiance Tenang</h3>
+                        <p>Musik jazz lembut, kursi nyaman, dan WiFi cepat untuk produktivitas Anda.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="ph ph-chef-hat feature-icon"></i>
+                        <h3>Artisan Pastry</h3>
+                        <p>Roti dan kue dipanggang segar setiap pagi di dapur terbuka kami.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding menu-section">
+            <div class="container">
+                <span class="section-tag">Menu Favorit</span>
+                <h2>Pilihan Barista Minggu Ini</h2>
+                
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" 
+                             class="menu-img" 
+                             alt="Classic Tiramisu" 
+                             loading="lazy">
+                        <div class="menu-info">
+                            <div class="menu-header">
+                                <h3>Classic Tiramisu</h3>
+                                <span class="menu-price">45K</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #777;">Mascarpone asli Italia, ladyfingers, dan espresso blend house.</p>
                         </div>
-                        <p style="font-size: 0.9rem; color: #777;">Mascarpone asli Italia, ladyfingers, dan espresso blend house.</p>
                     </div>
-                </div>
 
-                <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" class="menu-img" alt="V60">
-                    <div class="menu-info">
-                        <div class="menu-header">
-                            <h3>V60 Gayo Wine</h3>
-                            <span class="menu-price">38K</span>
+                    <div class="menu-card">
+                         <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" 
+                             class="menu-img" 
+                             alt="V60 Gayo Wine" 
+                             loading="lazy">
+                        <div class="menu-info">
+                            <div class="menu-header">
+                                <h3>V60 Gayo Wine</h3>
+                                <span class="menu-price">38K</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #777;">Manual brew dengan notes anggur fermentasi dan bunga.</p>
                         </div>
-                        <p style="font-size: 0.9rem; color: #777;">Manual brew dengan notes anggur fermentasi dan bunga.</p>
                     </div>
-                </div>
 
-                <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=600&auto=format&fit=crop" class="menu-img" alt="Cocktail Coffee">
-                    <div class="menu-info">
-                        <div class="menu-header">
-                            <h3>Espresso Martini</h3>
-                            <span class="menu-price">42K</span>
+                    <div class="menu-card">
+                         <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=600&auto=format&fit=crop" 
+                             class="menu-img" 
+                             alt="Espresso Martini" 
+                             loading="lazy">
+                        <div class="menu-info">
+                            <div class="menu-header">
+                                <h3>Espresso Martini</h3>
+                                <span class="menu-price">42K</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #777;">(Non-Alcoholic) Cold brew concentrate, vanilla syrup, foam.</p>
                         </div>
-                        <p style="font-size: 0.9rem; color: #777;">(Non-Alcoholic) Cold brew concentrate, vanilla syrup, foam.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 50px;">
+                    <a href="menu.html" style="border: 1px solid var(--primary-dark); padding: 12px 30px; border-radius: 50px; text-transform: uppercase; font-size: 0.8rem;">Lihat Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding gallery-section">
+            <div class="container">
+                <span class="section-tag">Suasana</span>
+                <h2>Galeri Senja</h2>
+                
+                <div class="gallery-container">
+                    <button class="slider-btn prev-btn" onclick="moveSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+                    <button class="slider-btn next-btn" onclick="moveSlide(1)" aria-label="Next Slide">&#10095;</button>
+
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide">
+                             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" alt="Coffee Art" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" alt="Outdoor Seating" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" alt="Barista" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?q=80&w=1200&auto=format&fit=crop" alt="Interior" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div style="margin-top: 50px;">
-                <a href="menu.html" style="border: 1px solid var(--primary-dark); padding: 12px 30px; border-radius: 50px; text-transform: uppercase; font-size: 0.8rem;">Lihat Full Menu</a>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Siap Untuk Pengalaman Terbaik?</h2>
+                <p>Meja favorit Anda menunggu. Reservasi sekarang untuk memastikan tempat, terutama di akhir pekan.</p>
+                <a href="reservation.html" class="btn-gold" style="border: 2px solid var(--accent-gold);">Reservasi Sekarang</a>
             </div>
-        </div>
-    </section>
-
-    <section class="section-padding gallery-section">
-        <div class="container">
-            <span class="section-tag">Suasana</span>
-            <h2>Galeri Senja</h2>
-            
-            <div class="gallery-container">
-                <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
-
-                <div class="slider-track" id="sliderTrack">
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" alt="Coffee Art">
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" alt="Outdoor Seating">
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" alt="Barista">
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?q=80&w=1200&auto=format&fit=crop" alt="Interior">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>Siap Untuk Pengalaman Terbaik?</h2>
-            <p>Meja favorit Anda menunggu. Reservasi sekarang untuk memastikan tempat, terutama di akhir pekan.</p>
-            <a href="reservation.html" class="btn-gold" style="border: 2px solid var(--accent-gold);">Reservasi Sekarang</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container footer-grid">
@@ -317,9 +453,9 @@
             <div>
                 <h4 class="footer-title">Ikuti Kami</h4>
                 <div class="footer-social">
-                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
-                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
-                    <a href="#"><i class="ph ph-tiktok-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
                 </div>
             </div>
         </div>
@@ -327,6 +463,15 @@
             &copy; 2025 Sendja & Sedoeh Cafe. All Rights Reserved.
         </div>
     </footer>
+
+    <div class="floating-container">
+        <a href="#" class="float-btn btn-top" id="btnTop" title="Kembali ke Atas" aria-label="Scroll to Top">
+            <i class="ph ph-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="float-btn btn-wa-float" title="Chat WhatsApp" aria-label="WhatsApp Chat">
+            <i class="ph ph-whatsapp-logo"></i>
+        </a>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -336,7 +481,8 @@
 
             if(hamburgerBtn) {
                 hamburgerBtn.addEventListener('click', function() {
-                    if (navMenu.style.display === "flex") {
+                    // Optimized Toggle Logic
+                    if (window.getComputedStyle(navMenu).display === "flex") {
                         navMenu.style.display = "none";
                     } else {
                         navMenu.style.display = "flex";
@@ -380,6 +526,24 @@
 
                 startAutoSlide();
             }
+        });
+
+        // 2. Logic Back to Top Button
+        const btnTop = document.getElementById("btnTop");
+
+        window.onscroll = function () {
+            // Jika scroll lebih dari 200px, munculkan tombol
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btnTop.classList.add("show");
+            } else {
+                btnTop.classList.remove("show");
+            }
+        };
+
+        // Fungsi klik scroll ke atas
+        btnTop.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservasi - Sendja & Sedoeh</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    
+
     <style>
         /* --- 1. VARIABLES & RESET (Konsisten) --- */
         :root {
@@ -16,67 +19,220 @@
             --bg-white: #FFFFFF;
             --bg-taupe: #EBE5DE;
             --text-grey: #666666;
-            --spacing-section: 60px; 
+            --spacing-section: 60px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Lato', sans-serif; background-color: var(--bg-cream); color: var(--primary-dark); line-height: 1.7; overflow-x: hidden; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--primary-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s ease;
+        }
 
         /* Utilities */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: var(--spacing-section) 0; }
-        .section-tag { color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 10px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: var(--spacing-section) 0;
+        }
+
+        .section-tag {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+        }
 
         /* Header */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background-color: rgba(249, 247, 242, 0.95); backdrop-filter: blur(5px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--primary-dark); }
-        nav ul { display: flex; gap: 40px; }
-        nav a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; position: relative; }
-        nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -5px; left: 0; background-color: var(--accent-gold); transition: width 0.3s; }
-        nav a:hover, nav a.active { color: var(--accent-gold); }
-        nav a:hover::after { width: 100%; }
-        .header-actions { display: flex; align-items: center; gap: 20px; }
-        .btn-reserve { padding: 10px 25px; border: 1px solid var(--primary-dark); color: var(--primary-dark); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700; }
-        .btn-reserve:hover { background-color: var(--primary-dark); color: #fff; }
-        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgba(249, 247, 242, 0.95);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* LOGO IMAGE STYLING (UPDATED) */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 50px; /* Mengatur tinggi maksimal agar pas di navbar */
+            width: 200px;      /* Lebar menyesuaikan proporsi (tidak gepeng) */
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent-gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-reserve {
+            padding: 10px 25px;
+            border: 1px solid var(--primary-dark);
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .btn-reserve:hover {
+            background-color: var(--primary-dark);
+            color: #fff;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
         /* --- 2. STYLE KHUSUS RESERVASI --- */
-        
+
         /* Page Hero */
         .page-hero {
-            height: 50vh;
+            height: 35vh;
             /* Gambar suasana malam/redup yang cocok untuk reservasi */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover; background-position: center; background-attachment: fixed;
-            display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
         }
-        .page-hero h1 { font-size: 3.5rem; }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+        }
 
         /* Reservation Layout */
         .reservation-wrapper {
             display: grid;
-            grid-template-columns: 1.5fr 1fr; /* Kiri lebih lebar untuk form */
+            grid-template-columns: 1.5fr 1fr;
+            /* Kiri lebih lebar untuk form */
             gap: 60px;
             background-color: #fff;
             padding: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
             border-radius: 4px;
-            margin-top: -80px; /* Overlap ke atas hero sedikit */
+            margin-top: -80px;
+            /* Overlap ke atas hero sedikit */
             position: relative;
             z-index: 10;
         }
 
         /* Form Styling */
-        .reservation-form h3 { font-size: 2rem; margin-bottom: 30px; color: var(--primary-dark); }
-        .form-row { display: flex; gap: 20px; }
-        .form-group { margin-bottom: 25px; flex: 1; }
-        .form-group label { display: block; font-size: 0.8rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; color: #888; }
-        
-        .form-group input, .form-group select, .form-group textarea {
+        .reservation-form h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary-dark);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: #888;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 15px;
             border: 1px solid #ddd;
@@ -86,7 +242,10 @@
             background-color: #FAFAFA;
             transition: 0.3s;
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             border-color: var(--accent-gold);
             background-color: #fff;
         }
@@ -103,52 +262,211 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .btn-submit:hover { background-color: var(--accent-gold); }
+
+        .btn-submit:hover {
+            background-color: var(--accent-gold);
+        }
 
         /* Info Styling (Sebelah Kanan) */
         .reservation-info {
             padding-left: 40px;
             border-left: 1px solid #eee;
         }
-        .info-block { margin-bottom: 40px; }
-        .info-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 15px; color: var(--accent-gold); }
-        .info-text { font-size: 0.95rem; color: #666; margin-bottom: 10px; }
-        .contact-highlight { font-size: 1.5rem; font-weight: 700; color: var(--primary-dark); margin-top: 10px; display: block; }
+
+        .info-block {
+            margin-bottom: 40px;
+        }
+
+        .info-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .info-text {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .contact-highlight {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-top: 10px;
+            display: block;
+        }
 
         /* Footer (Sama) */
-        footer { background-color: #1a1514; color: #aaa; padding: 50px 0 20px; font-size: 0.9rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
-        .footer-logo { font-size: 1.5rem; color: #fff; margin-bottom: 15px; display: block; }
-        .footer-title { color: #fff; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-social i { font-size: 1.5rem; margin-right: 15px; transition: 0.3s; }
-        .footer-social i:hover { color: var(--accent-gold); }
+        footer {
+            background-color: #1a1514;
+            color: #aaa;
+            padding: 50px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .footer-title {
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-social i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
+        .footer-social i:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- 3. FLOATING BUTTONS (BARU) --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .float-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Tombol WA */
+        .btn-wa-float {
+            background-color: #25D366;
+        }
+
+        /* Tombol Back to Top */
+        .btn-top {
+            background-color: var(--primary-dark);
+            opacity: 0;
+            /* Sembunyi default */
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* Class ini ditambahkan via JS saat scroll */
+        .btn-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
         /* Responsive Mobile */
         @media (max-width: 768px) {
-            header { padding: 15px 20px; }
-            .hamburger { display: block; }
-            nav { position: absolute; top: 70px; left: 0; width: 100%; background: var(--bg-cream); padding: 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); display: none; flex-direction: column; text-align: center; }
-            nav.active { display: flex; }
-            nav ul { flex-direction: column; gap: 20px; }
-            .header-actions .btn-reserve { display: none; }
-            
-            .page-hero h1 { font-size: 2.5rem; }
-            .reservation-wrapper { grid-template-columns: 1fr; padding: 30px 20px; margin-top: 0; gap: 40px; }
-            .form-row { flex-direction: column; gap: 0; }
-            .reservation-info { border-left: none; padding-left: 0; border-top: 1px solid #eee; padding-top: 40px; }
+            header {
+                padding: 15px 20px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-cream);
+                padding: 20px;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .header-actions .btn-reserve {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .reservation-wrapper {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+                margin-top: 0;
+                gap: 40px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .reservation-info {
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid #eee;
+                padding-top: 40px;
+            }
         }
+
+        /* Floating buttons sedikit digeser biar gak nutup konten */
+            .floating-container {
+                bottom: 20px;
+                right: 20px;
+            }
     </style>
 </head>
+
 <body>
 
     <header>
-        <div class="logo">Sendja & Sedoeh</div>
-        <nav id="navbar">
+<a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo Sendja & Sedoeh">
+        </a>        <nav id="navbar">
             <ul>
-                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="index.html">Beranda</a></li>
                 <li><a href="about.html">Tentang</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservation.html">Reservasi</a></li>
+                <li><a href="reservation.html" class="active">Reservasi</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
@@ -169,11 +487,11 @@
 
     <section class="section-padding container">
         <div class="reservation-wrapper">
-            
+
             <div class="reservation-form">
                 <span class="section-tag">Formulir Online</span>
                 <h3>Isi Data Reservasi</h3>
-                
+
                 <form id="reservationForm">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
@@ -213,7 +531,8 @@
 
                     <div class="form-group">
                         <label>Catatan Khusus (Opsional)</label>
-                        <textarea id="resNotes" rows="3" placeholder="Misal: Kursi bayi, kejutan ulang tahun, alergi makanan..."></textarea>
+                        <textarea id="resNotes" rows="3"
+                            placeholder="Misal: Kursi bayi, kejutan ulang tahun, alergi makanan..."></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit">Kirim ke WhatsApp</button>
@@ -221,10 +540,11 @@
             </div>
 
             <div class="reservation-info">
-                
+
                 <div class="info-block">
                     <h4 class="info-title">Hubungi Langsung</h4>
-                    <p class="info-text">Butuh respons cepat atau reservasi untuk acara besar (Private Event)? Silakan telepon kami.</p>
+                    <p class="info-text">Butuh respons cepat atau reservasi untuk acara besar (Private Event)? Silakan
+                        telepon kami.</p>
                     <span class="contact-highlight">+62 812 3456 7890</span>
                     <p class="info-text" style="margin-top: 5px;">halo@senjaseduh.com</p>
                 </div>
@@ -278,15 +598,24 @@
         </div>
     </footer>
 
+    <div class="floating-container">
+        <a href="#" class="float-btn btn-top" id="btnTop" title="Kembali ke Atas">
+            <i class="ph ph-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="float-btn btn-wa-float" title="Chat WhatsApp">
+            <i class="ph ph-whatsapp-logo"></i>
+        </a>
+    </div>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            
+        document.addEventListener("DOMContentLoaded", function () {
+
             // 1. Mobile Menu Toggle
             const hamburgerBtn = document.querySelector('.hamburger');
             const navMenu = document.getElementById("navbar");
 
-            if(hamburgerBtn) {
-                hamburgerBtn.addEventListener('click', function() {
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', function () {
                     if (navMenu.style.display === "flex") {
                         navMenu.style.display = "none";
                     } else {
@@ -297,9 +626,9 @@
 
             // 2. WhatsApp Logic
             const form = document.getElementById("reservationForm");
-            
-            if(form) {
-                form.addEventListener("submit", function(event) {
+
+            if (form) {
+                form.addEventListener("submit", function (event) {
                     event.preventDefault(); // Stop reload
 
                     // Ambil Data
@@ -311,7 +640,7 @@
                     var notes = document.getElementById("resNotes").value; // Baru
 
                     // Nomor WA Admin (Ganti dengan nomor asli, kode negara 62)
-                    var phoneNumber = "6281234567890"; 
+                    var phoneNumber = "6281234567890";
 
                     // Template Pesan
                     var rawMessage = `Halo Sendja & Sedoeh, saya ingin reservasi meja:
@@ -328,11 +657,30 @@ Mohon konfirmasinya. Terima kasih.`;
                     // Encode & Kirim
                     var encodedMessage = encodeURIComponent(rawMessage);
                     var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
-                    
+
                     window.location.href = whatsappUrl;
                 });
             }
         });
+
+        // 2. Logic Back to Top Button
+        const btnTop = document.getElementById("btnTop");
+
+        window.onscroll = function () {
+            // Jika scroll lebih dari 200px, munculkan tombol
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btnTop.classList.add("show");
+            } else {
+                btnTop.classList.remove("show");
+            }
+        };
+
+        // Fungsi klik scroll ke atas
+        btnTop.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
+
 </html>
