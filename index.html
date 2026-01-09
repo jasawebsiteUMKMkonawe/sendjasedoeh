@@ -1,762 +1,550 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <title>EstateVista — Premium Real Estate Services & Properties</title>
-  <meta name="description" content="EstateVista offers premium real estate services including property search, valuation, management, and investment advisory. Find your dream home tailored to your lifestyle.">
-  <meta name="keywords" content="Real Estate, Luxury Homes, Property Investment, House for Sale, Estate Agent, EstateVista">
-  <meta name="author" content="EstateVista">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://estatevista-three.vercel.app/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sendja & Sedoeh - Coffee Shop Klasik di Malang</title>
+    <meta name="description" content="Nikmati kopi Arabika terbaik dan pastry artisan di Sendja & Sedoeh. Cafe dengan suasana klasik dan tenang di jantung kota Malang. Reservasi sekarang.">
+    <meta name="keywords" content="Cafe Malang, Kopi Klasik, Tempat Nongkrong Malang, Sendja dan Sedoeh, Coffee Shop Ijen">
+    <meta name="author" content="Sendja & Sedoeh Team">
+    <meta name="robots" content="index, follow">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://estatevista-three.vercel.app/">
-  <meta property="og:title" content="EstateVista — Premium Real Estate">
-  <meta property="og:description" content="Find your dream home with EstateVista. We provide expert property search, valuation, and investment advisory services.">
-  <meta property="og:image" content="https://estatevista-three.vercel.app/img/rumah 4.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sendja & Sedoeh - Cita Rasa Klasik">
+    <meta property="og:description" content="Ruang tenang di tengah kota Malang. Nikmati seduhan kopi terbaik dan suasana nyaman.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://sendjasedoeh.vercel.app/">
 
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://estatevista-three.vercel.app/">
-  <meta property="twitter:title" content="EstateVista — Premium Real Estate">
-  <meta property="twitter:description" content="Find your dream home with EstateVista. We provide expert property search, valuation, and investment advisory services.">
-  <meta property="twitter:image" content="https://estatevista-three.vercel.app/img/rumah 4.html">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#F9F7F2">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/logo2.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#1A365D">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1920&auto=format&fit=crop">
 
-  <link rel="preload" as="image" href="https://estatevista-three.vercel.app/img/rumah 4.webp">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "EstateVista",
-    "image": "https://estatevista-three.vercel.app/img/logo.png",
-    "description": "Premium real estate agency specializing in luxury homes, property valuation, and investment advisory.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "108 Adam Street",
-      "addressLocality": "New York",
-      "addressRegion": "NY",
-      "postalCode": "535022",
-      "addressCountry": "US"
-    },
-    "telephone": "+155895548855",
-    "email": "info@estatevista.com",
-    "url": "https://estatevista-three.vercel.app/",
-    "priceRange": "$$$"
-  }
-  </script>
-
-  <style>
-    :root {
-      --primary: #1A365D;
-      --secondary: #D4AF37;
-      --accent: #2ECC71;
-      --light-bg: #F8F9FA;
-      --text-dark: #2D3748;
-      --text-light: #718096;
-      --white: #FFFFFF;
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Sendja & Sedoeh",
+      "image": "https://sendjasedoeh.vercel.app//img/logo.png",
+      "@id": "https://sendjasedoeh.vercel.app/",
+      "url": "https://sendjasedoeh.vercel.app/",
+      "telephone": "+6281234567890",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Ijen Besar No. 45",
+        "addressLocality": "Malang",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "65112",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.978469,
+        "longitude": 112.631786
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "23:00"
+        }
+      ],
+      "servesCuisine": "Coffee, Pastry, Indonesian",
+      "priceRange": "$$"
     }
+    </script>
 
-    body {
-      font-family: 'Lato', sans-serif;
-      color: var(--text-dark);
-      background-color: var(--light-bg);
-    }
+    <style>
+        /* --- 1. RESET & VARIABLES --- */
+        :root {
+            --primary-dark: #2C2321;
+            --accent-gold: #C5A975;
+            --bg-cream: #F9F7F2;
+            --bg-white: #FFFFFF;
+            --bg-taupe: #EBE5DE;
+            --text-grey: #666666;
+            --spacing-section: 60px; 
+        }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
-    }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
 
-    /* Navbar */
-    .navbar {
-      background-color: var(--white);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--primary-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-    /* Navbar Brand untuk Gambar */
-    .navbar-brand {
-      padding: 0;
-      display: flex;
-      align-items: center;
-    }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 
-    .navbar-brand img {
-      max-height: 50px;
-      width: auto;
-      display: block;
-    }
+        /* Container Utility */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: var(--spacing-section) 0; }
+        .section-tag { color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 10px; }
 
-    .navbar-nav .nav-link {
-      color: var(--text-dark);
-      font-weight: 600;
-    }
+        /* --- 2. HEADER & NAVIGATION --- */
+        header {
+            display: flex; justify-content: space-between; align-items: center; padding: 15px 50px;
+            background-color: rgba(249, 247, 242, 0.95); backdrop-filter: blur(5px);
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-    .navbar-nav .nav-link:hover {
-      color: var(--secondary);
-    }
+        /* LOGO IMAGE STYLING */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
-    .btn-primary {
-      background-color: var(--primary);
-      border-color: var(--primary);
-    }
+        .logo img {
+            max-height: 50px; 
+            width: auto;      
+            display: block;
+        }
 
-    .btn-secondary {
-      background-color: var(--secondary);
-      border-color: var(--secondary);
-      color: var(--primary);
-      font-weight: 700;
-    }
+        nav ul { display: flex; gap: 40px; }
+        nav a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; position: relative; }
+        nav a::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -5px; left: 0; background-color: var(--accent-gold); transition: width 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-gold); }
+        nav a:hover::after { width: 100%; }
 
-    .btn-secondary:hover {
-      background-color: #c19f2e;
-      color: var(--primary);
-    }
+        .header-actions { display: flex; align-items: center; gap: 20px; }
+        .btn-reserve { padding: 10px 25px; border: 1px solid var(--primary-dark); color: var(--primary-dark); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; font-weight: 700; }
+        .btn-reserve:hover { background-color: var(--primary-dark); color: #fff; }
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
 
-    /* Hero */
-    .hero {
-      background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), url('img/rumah 4.webp');
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      padding: 120px 0;
-    }
+        /* --- 3. HERO SECTION --- */
+        .hero {
+            height: 85vh; 
+            /* Menggunakan gambar high-res namun tetap dioptimasi CSS-nya */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1920&auto=format&fit=crop');
+            background-attachment: fixed; background-position: center; background-size: cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
+            /* Optimasi render priority */
+            content-visibility: auto;
+        }
+        .hero-content { max-width: 800px; padding: 20px; animation: fadeInUp 1.2s ease-out; }
+        .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; font-weight: 300; margin-bottom: 40px; letter-spacing: 0.5px; }
+        .btn-gold { background-color: var(--accent-gold); color: #fff; padding: 15px 40px; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; border: none; display: inline-block; cursor: pointer; }
+        .btn-gold:hover { background-color: #b0925e; transform: translateY(-3px); }
 
-    /* Stats */
-    .stats-section {
-      background-color: var(--white);
-      padding: 60px 0;
-    }
+        /* --- 4. ABOUT SECTION --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-img-wrapper { position: relative; }
+        .about-img-wrapper img { width: 90%; border-radius: 4px; }
+        .about-bg-accent { position: absolute; bottom: -20px; right: 0; width: 60%; height: 80%; background-color: var(--bg-taupe); z-index: -1; }
+        .text-content h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-dark); }
+        .text-content p { color: var(--text-grey); margin-bottom: 20px; font-size: 1rem; }
 
-    .stat-card {
-      text-align: center;
-      padding: 20px;
-    }
+        /* --- 5. FEATURES SECTION --- */
+        .features { background-color: var(--bg-white); text-align: center; }
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .feature-item { padding: 20px; transition: 0.3s; }
+        .feature-item:hover { transform: translateY(-10px); }
+        .feature-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 15px; }
 
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--secondary);
-    }
+        /* --- 6. MENU PREVIEW --- */
+        .menu-section { background-color: var(--bg-cream); text-align: center; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .menu-card { background: #fff; padding: 15px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: 0.3s; border-radius: 4px; }
+        .menu-card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.08); transform: translateY(-5px); }
+        .menu-img { height: 250px; width: 100%; object-fit: cover; margin-bottom: 20px; }
+        .menu-info { padding: 10px; }
+        .menu-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+        .menu-price { font-family: 'Playfair Display'; font-weight: 700; color: var(--accent-gold); font-size: 1.2rem; }
 
-    .stat-label {
-      color: var(--text-light);
-    }
+        /* --- 7. GALLERY SLIDER --- */
+        .gallery-section { background-color: #fff; text-align: center; overflow: hidden; }
+        .gallery-container { position: relative; max-width: 1000px; margin: 30px auto 0; border-radius: 4px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .slider-track { display: flex; transition: transform 0.5s ease-in-out; }
+        .slide { min-width: 100%; position: relative; }
+        .slide img { width: 100%; height: 500px; object-fit: cover; }
+        .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255,255,255,0.8); color: var(--primary-dark); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; z-index: 10; transition: 0.3s; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .slider-btn:hover { background-color: var(--primary-dark); color: var(--accent-gold); }
+        .prev-btn { left: 20px; }
+        .next-btn { right: 20px; }
 
-    /* Properties */
-    .property-card {
-      border: none;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      background: var(--white);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
+        /* --- 8. CTA SECTION --- */
+        .cta-section { background-color: var(--primary-dark); color: #fff; text-align: center; padding: 70px 20px; background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--accent-gold); }
+        .cta-section p { max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: #ddd; }
 
-    .property-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
+        /* --- 9. FOOTER --- */
+        footer { background-color: #1a1514; color: #aaa; padding: 50px 0 20px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-logo { font-size: 1.5rem; color: #fff; margin-bottom: 15px; display: block; }
+        .footer-title { color: #fff; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-social i { font-size: 1.5rem; margin-right: 15px; transition: 0.3s; }
+        .footer-social i:hover { color: var(--accent-gold); }
 
-    .property-img {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-    }
+        /* --- 3. FLOATING BUTTONS --- */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
 
-    .property-badge {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background-color: var(--secondary);
-      color: var(--primary);
-      padding: 5px 10px;
-      font-weight: 700;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
+        .float-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-    .property-body {
-        padding: 1.5rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
+        .float-btn:hover {
+            transform: translateY(-3px);
+        }
 
-    .property-price {
-      color: var(--secondary);
-      font-weight: 700;
-      font-size: 1.3rem;
-    }
+        .btn-wa-float {
+            background-color: #25D366;
+        }
 
-    .property-body .btn {
-        margin-top: auto; 
-    }
+        .btn-top {
+            background-color: var(--primary-dark);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
 
-    /* Services */
-    .service-card {
-      background: var(--white);
-      padding: 25px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: all 0.3s;
-      height: 100%;
-    }
+        .btn-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
 
-    .service-card:hover {
-      border-top: 4px solid var(--secondary);
-    }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
-    .service-icon {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 15px;
-    }
-
-    /* Testimonials */
-    .testimonial-card {
-      background: var(--white);
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      height: 100%;
-    }
-
-    .testimonial-text {
-      font-style: italic;
-      color: var(--text-dark);
-    }
-
-    .rating {
-      color: var(--secondary);
-    }
-
-    /* CTA Section */
-    .cta-section {
-      background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('img/rumah 1.webp');
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      padding: 50px 0;
-      text-align: center;
-    }
-
-    .cta-section .btn {
-      margin: 10px;
-    }
-
-    /* Ad Banner Section */
-    .ad-banner-section {
-      background-color: var(--light-bg);
-    }
-
-    .ad-banner-section .position-relative {
-      max-width: 1200px;
-      margin: 0 auto;
-      border-radius: 12px;
-      overflow: hidden;
-      position: relative;
-      height: 400px;
-    }
-
-    .ad-banner-section img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Footer */
-    .footer {
-      background-color: var(--primary);
-      color: var(--white);
-      padding: 20px 0 20px;
-    }
-
-    .footer a {
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: var(--secondary);
-    }
-
-    .social-icon {
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      text-align: center;
-      line-height: 36px;
-      margin-right: 8px;
-      color: var(--white);
-      transition: background 0.3s;
-    }
-
-    .social-icon:hover {
-      background: var(--secondary);
-      color: var(--primary);
-    }
-
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 20px;
-      margin-top: 40px;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-    }
-
-    /* --- FLOATING BUTTONS CSS --- */
-    .floating-buttons {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 9999;
-    }
-
-    .float-btn {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 24px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, opacity 0.3s;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .float-btn:hover {
-      transform: translateY(-5px);
-      color: #fff;
-    }
-
-    .whatsapp-btn {
-      background-color: #25d366;
-    }
-
-    .scroll-top-btn {
-      background-color: var(--primary);
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .scroll-top-btn.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    @media (max-width: 768px) {
-      .hero { padding: 80px 0; }
-      .floating-buttons {
-        bottom: 20px;
-        right: 20px;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .hamburger { display: block; }
+            nav { position: absolute; top: 70px; left: 0; width: 100%; background: var(--bg-cream); padding: 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); display: none; flex-direction: column; text-align: center; }
+            nav.active { display: flex; }
+            nav ul { flex-direction: column; gap: 20px; }
+            .header-actions .btn-reserve { display: none; }
+            .logo img { max-height: 40px; }
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid, .feature-grid { grid-template-columns: 1fr; }
+            .about-img-wrapper { order: -1; margin-bottom: 30px; }
+            .slide img { height: 300px; }
+            .text-content { padding: 0 15px; }
+        }
+        .floating-container { bottom: 20px; right: 20px; }
+    </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" aria-label="EstateVista Home">
-        <img src="img/logo.png" alt="EstateVista Logo" width="150" height="50">
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="properti.html">Properties</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        </ul>
-        <div class="ms-lg-3 mt-2 mt-lg-0">
-          <a href="tel:+155895548855" class="text-primary fw-bold d-none d-lg-inline">
-            Contact
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo Sendja & Sedoeh" fetchpriority="high" width="200" height="50">
+        </a>
 
-  <section class="hero">
-    <div class="container text-center text-white">
-      <h1 class="display-4 fw-bold">Find Your Dream Home with Us</h1>
-      <p class="lead mt-3 mb-4">We help you discover the perfect property tailored to your lifestyle </p>
-      
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-10">
-          <div class="bg-white p-4 rounded shadow">
-            <form class="row g-3" action="properti.html" method="GET">
-              
-              <div class="col-md-5">
-                <select name="type" class="form-select" aria-label="Select Property Type">
-                  <option value="" selected>Type</option>
-                  <option value="HOUSE">House</option>
-                  <option value="VILLA">Villa</option>
-                  <option value="APARTMENT">Apartment</option>
-                  <option value="CONDO">Condo</option>
-                  <option value="TOWNHOUSE">Townhouse</option>
-                  <option value="LOFT">Loft</option>
-                </select>
-              </div>
-
-              <div class="col-md-5">
-                <select name="price" class="form-select" aria-label="Select Price Range">
-                  <option value="" selected>Max Budget</option>
-                  <option value="0-500000">Up to $500K</option>
-                  <option value="500001-1000000">Up to $1M</option>
-                  <option value="1000001-2000000">Up to $2M</option>
-                  <option value="2000001">Above $2M</option>
-                </select>
-              </div>
-
-              <div class="col-md-2">
-                <button type="submit" class="btn btn-secondary w-100">Search</button>
-              </div>
-            </form>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservasi</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="reservation.html" class="btn-reserve">Book Table</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
             </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="ad-banner-section py-4">
-    <div class="container">
-      <div class="position-relative rounded overflow-hidden shadow-sm">
-        <img src="img/rumah 5.webp" alt="The Armont Residences - Exclusive Preview" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;" loading="lazy" width="1200" height="400">
-      </div>
-    </div>
-  </section>
-
-  <section class="stats-section">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4">
-          <div class="stat-card">
-            <div class="stat-number">2,500+</div>
-            <div class="stat-label">Homes Sold</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="stat-card">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Client Satisfaction</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="stat-card">
-            <div class="stat-number">20+ Years</div>
-            <div class="stat-label">Experience</div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <a href="about.html" class="btn btn-outline-primary">Discover Our Legacy</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>Handpicked Luxury Residences</h2>
-        <p class="text-muted">Discover properties curated for elegance, comfort, and value.</p>
-      </div>
-      
-      <div class="row align-items-stretch">
-        
-        <div class="col-md-4 mb-4">
-          <div class="property-card">
-            <div class="position-relative">
-              <img src="img/rumah 1.webp" class="property-img" alt="Luxury Magnificent Estate in Malibu" loading="lazy" width="400" height="250">
-              <span class="property-badge">PREMIUM</span>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Cita Rasa Klasik dalam<br>Setiap Seduhan</h1>
+                <p>Ruang tenang di tengah kota, di mana kualitas bertemu dengan kenyamanan.</p>
+                <a href="menu.html" class="btn-gold">Jelajahi Rasa</a>
             </div>
-            <div class="property-body">
-              <div class="property-price">$4,850,000</div>
-              <h5 class="mt-2">Magnificent Estate</h5>
-              <p class="text-muted small">
-                <i class="fas fa-map-marker-alt me-2"></i>Malibu, CA
-              </p>
-              <div class="d-flex justify-content-between text-muted small mb-3">
-                <span><i class="fas fa-bed me-1"></i> 5 Beds</span>
-                <span><i class="fas fa-bath me-1"></i> 4 Baths</span>
-                <span><i class="fas fa-ruler-combined me-1"></i> 4,200 sqft</span>
-              </div>
-              <a href="detail1.html" class="btn btn-primary w-100">View Details</a>
+        </section>
+
+        <section class="section-padding container">
+            <div class="about-grid">
+                <div class="about-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=800&auto=format&fit=crop" 
+                         alt="Interior Cafe Sendja & Sedoeh" 
+                         loading="lazy" 
+                         decoding="async">
+                    <div class="about-bg-accent"></div>
+                </div>
+                <div class="text-content">
+                    <span class="section-tag">Cerita Kami</span>
+                    <h2>Warisan Kualitas & Estetika</h2>
+                    <p>Didirikan atas kecintaan pada kopi tradisional, Sendja & Sedoeh bukan sekadar kedai kopi. Kami adalah rumah bagi mereka yang mencari jeda dari hiruk pikuk kota.</p>
+                    <p>Setiap sudut interior kami dirancang dengan detail klasik, menciptakan atmosfer yang hangat untuk bekerja, bercengkrama, atau sekadar melamun.</p>
+                    <a href="about.html" style="border-bottom: 1px solid var(--accent-gold); display: inline-block; margin-top: 10px;">Lebih lanjut tentang kami &rarr;</a>
+                </div>
             </div>
-          </div>
+        </section>
+
+        <section class="section-padding features">
+            <div class="container">
+                <div class="text-content">
+                    <span class="section-tag">Kenapa Memilih Kami</span>
+                    <h2>Pengalaman yang Berbeda</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="ph ph-coffee-bean feature-icon"></i>
+                        <h3>Biji Kopi Pilihan</h3>
+                        <p>Hanya menggunakan 100% Arabika Grade 1 dari petani lokal Jawa Timur.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="ph ph-armchair feature-icon"></i>
+                        <h3>Ambiance Tenang</h3>
+                        <p>Musik jazz lembut, kursi nyaman, dan WiFi cepat untuk produktivitas Anda.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="ph ph-chef-hat feature-icon"></i>
+                        <h3>Artisan Pastry</h3>
+                        <p>Roti dan kue dipanggang segar setiap pagi di dapur terbuka kami.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding menu-section">
+            <div class="container">
+                <span class="section-tag">Menu Favorit</span>
+                <h2>Pilihan Barista Minggu Ini</h2>
+                
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" 
+                             class="menu-img" 
+                             alt="Classic Tiramisu" 
+                             loading="lazy">
+                        <div class="menu-info">
+                            <div class="menu-header">
+                                <h3>Classic Tiramisu</h3>
+                                <span class="menu-price">45K</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #777;">Mascarpone asli Italia, ladyfingers, dan espresso blend house.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                         <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" 
+                             class="menu-img" 
+                             alt="V60 Gayo Wine" 
+                             loading="lazy">
+                        <div class="menu-info">
+                            <div class="menu-header">
+                                <h3>V60 Gayo Wine</h3>
+                                <span class="menu-price">38K</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #777;">Manual brew dengan notes anggur fermentasi dan bunga.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                         <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=600&auto=format&fit=crop" 
+                             class="menu-img" 
+                             alt="Espresso Martini" 
+                             loading="lazy">
+                        <div class="menu-info">
+                            <div class="menu-header">
+                                <h3>Espresso Martini</h3>
+                                <span class="menu-price">42K</span>
+                            </div>
+                            <p style="font-size: 0.9rem; color: #777;">(Non-Alcoholic) Cold brew concentrate, vanilla syrup, foam.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 50px;">
+                    <a href="menu.html" style="border: 1px solid var(--primary-dark); padding: 12px 30px; border-radius: 50px; text-transform: uppercase; font-size: 0.8rem;">Lihat Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding gallery-section">
+            <div class="container">
+                <span class="section-tag">Suasana</span>
+                <h2>Galeri Senja</h2>
+                
+                <div class="gallery-container">
+                    <button class="slider-btn prev-btn" onclick="moveSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+                    <button class="slider-btn next-btn" onclick="moveSlide(1)" aria-label="Next Slide">&#10095;</button>
+
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide">
+                             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" alt="Coffee Art" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" alt="Outdoor Seating" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" alt="Barista" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?q=80&w=1200&auto=format&fit=crop" alt="Interior" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Siap Untuk Pengalaman Terbaik?</h2>
+                <p>Meja favorit Anda menunggu. Reservasi sekarang untuk memastikan tempat, terutama di akhir pekan.</p>
+                <a href="reservation.html" class="btn-gold" style="border: 2px solid var(--accent-gold);">Reservasi Sekarang</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <span class="footer-logo">Sendja & Sedoeh</span>
+                <p>Menghadirkan kenyamanan klasik dan kopi terbaik di jantung kota Malang.</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Lokasi</h4>
+                <p>Jl. Ijen Besar No. 45<br>Malang, Jawa Timur</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Jam Buka</h4>
+                <p>Senin - Jumat: 08:00 - 22:00</p>
+                <p>Sabtu - Minggu: 09:00 - 23:00</p>
+            </div>
+            <div>
+                <h4 class="footer-title">Ikuti Kami</h4>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+                </div>
+            </div>
         </div>
-
-        <div class="col-md-4 mb-4">
-          <div class="property-card">
-            <div class="position-relative">
-              <img src="img/rumah 2.webp" class="property-img" alt="Modern Downtown Condo in Seattle" loading="lazy" width="400" height="250">
-              <span class="property-badge">NEW</span>
-            </div>
-            <div class="property-body">
-              <div class="property-price">$1,595,000</div>
-              <h5 class="mt-2">Contemporary Downtown Condo</h5>
-              <p class="text-muted small">
-                <i class="fas fa-map-marker-alt me-2"></i>Seattle, WA
-              </p>
-              <div class="d-flex justify-content-between text-muted small mb-3">
-                <span><i class="fas fa-bed me-1"></i> 3 Beds</span>
-                <span><i class="fas fa-bath me-1"></i> 2 Baths</span>
-                <span><i class="fas fa-ruler-combined me-1"></i> 2,100 sqft</span>
-              </div>
-              <a href="detail2.html" class="btn btn-primary w-100">View Details</a>
-            </div>
-          </div>
+        <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px; color: #666;">
+            &copy; 2025 Sendja & Sedoeh Cafe. All Rights Reserved.
         </div>
+    </footer>
 
-        <div class="col-md-4 mb-4">
-          <div class="property-card">
-            <div class="position-relative">
-              <img src="img/rumah 3.webp" class="property-img" alt="Modern Architectural Home in Phoenix" loading="lazy" width="400" height="250">
-            </div>
-            <div class="property-body">
-              <div class="property-price">$1,375,000</div>
-              <h5 class="mt-2">Modern Architectural Gem</h5>
-              <p class="text-muted small">
-                <i class="fas fa-map-marker-alt me-2"></i>Phoenix, AZ
-              </p>
-              <div class="d-flex justify-content-between text-muted small mb-3">
-                <span><i class="fas fa-bed me-1"></i> 4 Beds</span>
-                <span><i class="fas fa-bath me-1"></i> 3 Baths</span>
-                <span><i class="fas fa-ruler-combined me-1"></i> 2,800 sqft</span>
-              </div>
-              <a href="detail3.html" class="btn btn-primary w-100">View Details</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="text-center mt-4">
-        <a href="properti.html" class="btn btn-secondary">View All Properties</a>
-      </div>
-
+    <div class="floating-container">
+        <a href="#" class="float-btn btn-top" id="btnTop" title="Kembali ke Atas" aria-label="Scroll to Top">
+            <i class="ph ph-arrow-up"></i>
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="float-btn btn-wa-float" title="Chat WhatsApp" aria-label="WhatsApp Chat">
+            <i class="ph ph-whatsapp-logo"></i>
+        </a>
     </div>
-  </section>
 
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>Our Premium Real Estate Services</h2>
-        <p class="text-muted">Tailored solutions for every real estate need.</p>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-search"></i></div>
-            <h5>Property Search</h5>
-            <p>Comprehensive listings, advanced filters, and virtual tours to find your perfect match.</p>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-            <h5>Property Valuation</h5>
-            <p>Accurate market analysis, comparative reports, and investment insights.</p>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-home"></i></div>
-            <h5>Property Rental</h5>
-            <p>Tenant matching, lease management, and full maintenance support.</p>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
-            <h5>Investment Advisory</h5>
-            <p>Portfolio planning, risk assessment, and ROI forecasting for smart investors.</p>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <a href="service.html" class="btn btn-secondary">Explore All Services</a>
-      </div>
-    </div>
-  </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // --- 1. MOBILE MENU ---
+            const hamburgerBtn = document.querySelector('.hamburger');
+            const navMenu = document.getElementById("navbar");
 
-  <section class="cta-section">
-    <div class="container">
-      <h2>Need Help Finding Your Dream Property?</h2>
-      <p class="lead mb-4">Let our experts guide you through every step — from search to closing.</p>
-      
-      <a 
-        href="https://wa.me/155895548855?text=Hi%20EstateVista%21%20I%E2%80%99d%20like%20to%20schedule%20a%20free%20consultation%20for%20property%20viewing.%20Please%20assist%20me." 
-        class="btn btn-secondary btn-lg"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-      >
-        Schedule a Free Consultation
-      </a>
-      
-      <a href="tel:+155895548855" class="btn btn-outline-light btn-lg">Call Us Now</a>
+            if(hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', function() {
+                    // Optimized Toggle Logic
+                    if (window.getComputedStyle(navMenu).display === "flex") {
+                        navMenu.style.display = "none";
+                    } else {
+                        navMenu.style.display = "flex";
+                    }
+                });
+            }
 
-      <div class="mt-4 d-flex justify-content-center flex-wrap">
-        <div class="d-flex align-items-center mx-3 my-2 text-white">
-          <i class="fas fa-phone me-2"></i> Free Consultation
-        </div>
-        <div class="d-flex align-items-center mx-3 my-2 text-white">
-          <i class="fas fa-clock me-2"></i> 24/7 Support
-        </div>
-        <div class="d-flex align-items-center mx-3 my-2 text-white">
-          <i class="fas fa-shield-alt me-2"></i> Trusted Experts
-        </div>
-      </div>
-    </div>
-  </section>
+            // --- 2. GALLERY SLIDER LOGIC ---
+            let currentIndex = 0;
+            const track = document.getElementById('sliderTrack');
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            let slideInterval;
 
-  <section class="py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>What Our Clients Say</h2>
-        <p class="text-muted">Real stories from satisfied homeowners.</p>
-      </div>
-      <div class="row align-items-stretch">
-        <div class="col-md-6 mb-4">
-          <div class="testimonial-card">
-            <p class="testimonial-text">“Working with EstateVista made buying our first home seamless. Their local market knowledge exceeded expectations.”</p>
-            <div class="d-flex align-items-center mt-3">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="50" height="50" alt="Client Sarah Martinez" loading="lazy">
-              <div>
-                <strong>Sarah Martinez</strong><br>
-                <small class="text-muted">First-time Homebuyer</small>
-              </div>
-              <div class="rating ms-auto">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="testimonial-card">
-            <p class="testimonial-text">“Sold my property in just 7 days at 10% above asking price. Their marketing strategy is unmatched.”</p>
-            <div class="d-flex align-items-center mt-3">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50" height="50" alt="Client James Wilson" loading="lazy">
-              <div>
-                <strong>James Wilson</strong><br>
-                <small class="text-muted">Property Investor</small>
-              </div>
-              <div class="rating ms-auto">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            if(track && slides.length > 0) {
+                function updateSlidePosition() {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 mb-4">
-          <h4 class="text-white">EstateVista</h4>
-          <p class="text-white-50">Where dreams meet reality.</p>
-          <div>
-            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 mb-4">
-          <h6 class="text-white">Quick Links</h6>
-          <ul class="list-unstyled">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="properti.html">Properties</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4 mb-4">
-          <h6 class="text-white">Our Services</h6>
-          <ul class="list-unstyled">
-            <li><a href="#">Property Search</a></li>
-            <li><a href="#">Property Valuation</a></li>
-            <li><a href="#">Property Rental</a></li>
-            <li><a href="#">Investment Advisory</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4 mb-4">
-          <h6 class="text-white">Contact Us</h6>
-          <p class="text-white-50"><i class="fas fa-map-marker-alt me-2"></i> 108 Adam Street, New York, NY 535022</p>
-          <p class="text-white-50"><i class="fas fa-phone me-2"></i> +1 5589 55488 55</p>
-          <p class="text-white-50"><i class="fas fa-envelope me-2"></i> info@estatevista.com</p>
-        </div>
-      </div>
-      <div class="copyright text-center text-white-50">
-        &copy; 2026 EstateVista. All Rights Reserved.
-      </div>
-    </div>
-  </footer>
+                window.moveSlide = function(direction) {
+                    currentIndex += direction;
+                    if (currentIndex < 0) {
+                        currentIndex = totalSlides - 1;
+                    } else if (currentIndex >= totalSlides) {
+                        currentIndex = 0;
+                    }
+                    updateSlidePosition();
+                    resetAutoSlide(); 
+                }
 
-  <div class="floating-buttons">
-    <a href="https://wa.me/155895548855?text=Hello%20EstateVista,%20I'm%20interested%20in%20your%20services." class="float-btn whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <button id="scrollTopBtn" class="float-btn scroll-top-btn" onclick="scrollToTop()" aria-label="Scroll to Top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-  </div>
+                function startAutoSlide() {
+                    slideInterval = setInterval(() => {
+                        window.moveSlide(1); 
+                    }, 3000); 
+                }
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                function resetAutoSlide() {
+                    clearInterval(slideInterval);
+                    startAutoSlide();
+                }
 
-  <script>
-    // Logic Scroll to Top
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    window.onscroll = function() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            scrollTopBtn.classList.add("show");
-        } else {
-            scrollTopBtn.classList.remove("show");
-        }
-    };
-
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+                startAutoSlide();
+            }
         });
-    }
-  </script>
+
+        // 2. Logic Back to Top Button
+        const btnTop = document.getElementById("btnTop");
+
+        window.onscroll = function () {
+            // Jika scroll lebih dari 200px, munculkan tombol
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btnTop.classList.add("show");
+            } else {
+                btnTop.classList.remove("show");
+            }
+        };
+
+        // Fungsi klik scroll ke atas
+        btnTop.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
